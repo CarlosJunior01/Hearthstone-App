@@ -4,4 +4,12 @@
     <!-- Hearthstone Fragment -->
     <string name="hearthstone_title_fragment">Hearthstone</string>
 
+    <!-- Error Screen -->
+    <string name="error_generic_error_title">Ops!</string>
+    <string name="error_generic_error_description">Aconteceu algum erro. \nPor favor tente novamente.</string>
+    <string name="error_btn_try_again">Tentar Novamente</string>
+
+    <!-- Accessibility Description -->
+    <string name="accessibility_hearthstone_logo">Icone do Hearthstone</string>
+
 </resources>

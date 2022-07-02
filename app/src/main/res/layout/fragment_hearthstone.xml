@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<ViewFlipper xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/view_flipper_screen"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".presentation.HearthstoneFragment">
+    android:background="@color/gray_3232">
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hearthstone_title_fragment" />
+    <include android:id="@+id/intro_screen" layout="@layout/intro_hearthstone_screen" />
+    <include android:id="@+id/home_screen" layout="@layout/home_hearthstone_screen" />
+    <include android:id="@+id/hearthstone_screen" layout="@layout/home_hearthstone_screen" />
+    <include android:id="@+id/error_screen" layout="@layout/error_hearthstone_screen" />
 
-</FrameLayout>
+</ViewFlipper>
