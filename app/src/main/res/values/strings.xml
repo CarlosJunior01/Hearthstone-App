@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Hearthstone App</string>
+
+    <!-- Hearthstone Fragment -->
+    <string name="hearthstone_title_fragment">Hearthstone</string>
+
 </resources>
