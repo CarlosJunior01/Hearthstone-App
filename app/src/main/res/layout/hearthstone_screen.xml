@@ -10,39 +10,54 @@
         android:id="@+id/guideline_left"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintGuide_begin="@dimen/size_16_dp"
+        app:layout_constraintGuide_begin="@dimen/size_24_dp"
         android:orientation="vertical" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline_right"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintGuide_end="@dimen/size_16_dp"
+        app:layout_constraintGuide_end="@dimen/size_24_dp"
         android:orientation="vertical" />
 
-    <TextView
-        android:id="@+id/txt_hearthstone_title"
+    <com.facebook.shimmer.ShimmerFrameLayout
+        android:id="@+id/shimmer_layout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:padding="@dimen/size_8_dp"
-        android:layout_marginTop="@dimen/size_8_dp"
-        android:text="@string/hearthstone_title_fragment"
-        android:textColor="@color/white"
-        android:textSize="@dimen/font_size_24_sp"
-        android:textStyle="bold"
+        app:shimmer_auto_start="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/guideline_right"
         app:layout_constraintStart_toStartOf="@+id/guideline_left"
+        app:layout_constraintTop_toTopOf="@+id/recycler_hearthstone"
+        tools:visibility="invisible" >
+
+        <ImageView
+            android:id="@+id/img_shimmer_background"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/size_32_dp"
+            app:srcCompat="@drawable/shimmer_background" />
+
+    </com.facebook.shimmer.ShimmerFrameLayout>
+
+    <include
+        android:id="@+id/hearthstone_actionbar"
+        layout="@layout/fragment_actionbar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/shimmer_layout"
         app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recycler_hearthstone"
         android:layout_width="0dp"
         android:layout_height="0dp"
+        android:layout_marginTop="@dimen/size_16_dp"
+        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/guideline_right"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/guideline_left"
-        app:layout_constraintTop_toBottomOf="@+id/txt_hearthstone_title"
-        app:layout_constraintVertical_bias="0.0"
+        app:layout_constraintTop_toBottomOf="@+id/hearthstone_actionbar"
         tools:listitem="@layout/recycler_item_menu_list" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
