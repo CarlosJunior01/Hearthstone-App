@@ -34,6 +34,13 @@ Aplicativo Android Nativo escrito em Kotlin, consumindo Api Hearthstone e proces
 ![Gif_02](https://user-images.githubusercontent.com/9430430/177154971-cf3396d4-476b-448b-bc0e-86b71fad58f7.gif)
 
 *******
+**Como configurar o projeto:**
+
+Para conseguir executar a aplicação será necessário inserir sua X-RapidAPI-Key gerada em https://rapidapi.com e em seguida adicionar no arquivo **local.properties** dentro de **apiToken** conforme a imagem abaixo.
+
+![image](https://user-images.githubusercontent.com/9430430/177158000-47825251-4eb6-46ee-880c-2a2da122e2c9.png)
+
+*******
 
 * **Arquitetura MVVM + CLEAN ARCHITECTURE**
 *******
