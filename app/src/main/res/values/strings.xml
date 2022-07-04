@@ -9,6 +9,18 @@
     <string name="error_generic_error_description">Aconteceu algum erro. \nPor favor tente novamente.</string>
     <string name="error_btn_try_again">Tentar Novamente</string>
 
+    <!-- Hearthstone Details Fragment -->
+    <string name="card_name">Name: %1$s</string>
+    <string name="card_type">Type: %1$s</string>
+    <string name="card_flavor">Flavor: %1$s</string>
+    <string name="card_text">Short Description: %1$s</string>
+    <string name="card_set">Set: %1$s</string>
+    <string name="card_faction">Faction: %1$s</string>
+    <string name="card_rarity">Rarity: %1$s</string>
+    <string name="card_attack">Attack: %1$d</string>
+    <string name="card_cost">Cost: %1$d</string>
+    <string name="card_health">Health: %1$d</string>
+
     <!-- Accessibility Description -->
     <string name="accessibility_hearthstone_logo">Icone do Hearthstone</string>
 
