@@ -1,5 +1,5 @@
 # Hearthstone-App
-Aplicativo de listagem e Cards Hearthstone.
+Aplicativo de listagem de Cards Hearthstone.
 
 ![GitHub top language](https://img.shields.io/github/languages/top/Carlosjr01/Filmes-App) 
 [![MVVM](https://img.shields.io/badge/Architecture-MVVM_+_CLEAN_ARCHITECTURE-black)](https://www.youtube.com/watch?v=tIPxSWx5qpk) 
