@@ -24,12 +24,12 @@
         android:id="@+id/shimmer_layout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:shimmer_auto_start="true"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/guideline_right"
         app:layout_constraintStart_toStartOf="@+id/guideline_left"
-        app:layout_constraintTop_toTopOf="@+id/recycler_hearthstone"
-        tools:visibility="invisible" >
+        app:layout_constraintTop_toBottomOf="@+id/hearthstone_actionbar"
+        app:shimmer_auto_start="true"
+        tools:visibility="invisible">
 
         <ImageView
             android:id="@+id/img_shimmer_background"
@@ -49,13 +49,12 @@
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recycler_hearthstone"
-        android:layout_width="0dp"
+        android:layout_width="wrap_content"
         android:layout_height="0dp"
         android:layout_marginTop="@dimen/size_16_dp"
         app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/guideline_right"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/guideline_left"
         app:layout_constraintTop_toBottomOf="@+id/hearthstone_actionbar"
         tools:listitem="@layout/recycler_item_menu_list" />

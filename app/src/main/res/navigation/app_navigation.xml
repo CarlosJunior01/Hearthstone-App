@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/app_navigation"
+    app:startDestination="@id/hearthstoneSplashFragment">
+
+    <fragment
+        android:id="@+id/hearthstoneHomeFragment"
+        android:name="com.carlos.hearthstoneapp.presentation.HearthstoneHomeFragment"
+        android:label="HearthstoneHomeFragment" >
+        <action
+            android:id="@+id/navigate_to_hearthstoneDetailsFragment"
+            app:destination="@id/hearthstoneDetailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/hearthstoneDetailsFragment"
+        android:name="com.carlos.hearthstoneapp.presentation.HearthstoneDetailsFragment"
+        android:label="fragment_hearthstone_details"
+        tools:layout="@layout/fragment_hearthstone_details" >
+        <argument
+            android:name="name"
+            app:argType="string" />
+        <argument
+            android:name="type"
+            app:argType="string" />
+        <argument
+            android:name="image"
+            app:argType="string" />
+        <argument
+            android:name="flavor"
+            app:argType="string" />
+        <argument
+            android:name="description"
+            app:argType="string" />
+        <argument android:name="set"
+            app:argType="string" />
+        <argument android:name="faction"
+            app:argType="string" />
+        <argument
+            android:name="rarity"
+            app:argType="string" />
+        <argument android:name="attack"
+            app:argType="integer" />
+        <argument
+            android:name="cost"
+            app:argType="integer" />
+        <argument
+            android:name="health"
+            app:argType="integer" />
+        <action
+            android:id="@+id/navigate_to_hearthstoneHomeFragment"
+            app:destination="@id/hearthstoneHomeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/hearthstoneSplashFragment"
+        android:name="com.carlos.hearthstoneapp.presentation.HearthstoneSplashFragment"
+        android:label="HearthstoneSplashFragment" >
+        <action
+            android:id="@+id/navigate_to_hearthstoneHomeFragment"
+            app:destination="@id/hearthstoneHomeFragment" />
+    </fragment>
+</navigation>

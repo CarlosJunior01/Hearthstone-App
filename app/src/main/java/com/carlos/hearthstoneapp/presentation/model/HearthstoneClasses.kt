@@ -5,7 +5,7 @@ data class HearthstoneClassVO(
 )
 
 fun setListHearthstoneClass() = listOf(
-    HearthstoneClassVO(name = "Death Knight"),
+    HearthstoneClassVO(name = "Demon Hunter"),
     HearthstoneClassVO(name = "Druid"),
     HearthstoneClassVO(name = "Hunter"),
     HearthstoneClassVO(name = "Mage"),
@@ -15,9 +15,5 @@ fun setListHearthstoneClass() = listOf(
     HearthstoneClassVO(name = "Shaman"),
     HearthstoneClassVO(name = "Warlock"),
     HearthstoneClassVO(name = "Warrior"),
-    HearthstoneClassVO(name = "Dream"),
-    HearthstoneClassVO(name = "Neutral"),
-    HearthstoneClassVO(name = "Whizbang"),
-    HearthstoneClassVO(name = "Demon Hunter")
+    HearthstoneClassVO(name = "Neutral")
 )
-
