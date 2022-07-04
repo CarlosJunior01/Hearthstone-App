@@ -31,22 +31,22 @@ class HearthstoneDetailsFragment : Fragment() {
     }
 
     private fun setTextViews() {
-        binding.hearthstoneActionbar.txtHearthstoneTitle.text = arguments.name
-        binding.txtCardName.text = resources.getString(R.string.card_name, arguments.name)
-        binding.txtCardType.text = resources.getString(R.string.card_name, arguments.type)
-        binding.txtCardFlavor.text = resources.getString(R.string.card_flavor, arguments.flavor)
-        binding.txtCardText.text = resources.getString(R.string.card_text, arguments.description)
-        binding.txtCardSet.text = resources.getString(R.string.card_set, arguments.set)
-        binding.txtCardFaction.text = resources.getString(R.string.card_faction, arguments.faction)
-        binding.txtCardRarity.text = resources.getString(R.string.card_rarity, arguments.rarity)
-        binding.txtCardAttack.text = resources.getString(R.string.card_attack, arguments.attack)
-        binding.txtCardCoast.text = resources.getString(R.string.card_cost, arguments.cost)
-        binding.txtCardHealth.text = resources.getString(R.string.card_health, arguments.health)
+        binding.hearthstoneActionbar.txtHearthstoneTitle.text = arguments.cardVO.name
+        binding.txtCardName.text = resources.getString(R.string.card_name, arguments.cardVO.name)
+        binding.txtCardType.text = resources.getString(R.string.card_name, arguments.cardVO.type)
+        binding.txtCardFlavor.text = resources.getString(R.string.card_flavor, arguments.cardVO.flavor)
+        binding.txtCardText.text = resources.getString(R.string.card_text, arguments.cardVO.text)
+        binding.txtCardSet.text = resources.getString(R.string.card_set, arguments.cardVO.cardSet)
+        binding.txtCardFaction.text = resources.getString(R.string.card_faction, arguments.cardVO.faction)
+        binding.txtCardRarity.text = resources.getString(R.string.card_rarity, arguments.cardVO.rarity)
+        binding.txtCardAttack.text = resources.getString(R.string.card_attack, arguments.cardVO.attack)
+        binding.txtCardCoast.text = resources.getString(R.string.card_cost, arguments.cardVO.cost)
+        binding.txtCardHealth.text = resources.getString(R.string.card_health, arguments.cardVO.health)
     }
 
     private fun setImageView(view: View) {
         Glide.with(view)
-            .load(arguments.image)
+            .load(arguments.cardVO.img)
             .placeholder(R.drawable.hearthstone_logo)
             .into(binding.imgCard)
     }

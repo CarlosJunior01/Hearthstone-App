@@ -18,39 +18,11 @@
         android:name="com.carlos.hearthstoneapp.presentation.HearthstoneDetailsFragment"
         android:label="fragment_hearthstone_details"
         tools:layout="@layout/fragment_hearthstone_details" >
-        <argument
-            android:name="name"
-            app:argType="string" />
-        <argument
-            android:name="type"
-            app:argType="string" />
-        <argument
-            android:name="image"
-            app:argType="string" />
-        <argument
-            android:name="flavor"
-            app:argType="string" />
-        <argument
-            android:name="description"
-            app:argType="string" />
-        <argument android:name="set"
-            app:argType="string" />
-        <argument android:name="faction"
-            app:argType="string" />
-        <argument
-            android:name="rarity"
-            app:argType="string" />
-        <argument android:name="attack"
-            app:argType="integer" />
-        <argument
-            android:name="cost"
-            app:argType="integer" />
-        <argument
-            android:name="health"
-            app:argType="integer" />
         <action
             android:id="@+id/navigate_to_hearthstoneHomeFragment"
             app:destination="@id/hearthstoneHomeFragment" />
+        <argument android:name="CardVO"
+            app:argType="com.carlos.hearthstoneapp.presentation.model.CardViewObject" />
     </fragment>
     <fragment
         android:id="@+id/hearthstoneSplashFragment"

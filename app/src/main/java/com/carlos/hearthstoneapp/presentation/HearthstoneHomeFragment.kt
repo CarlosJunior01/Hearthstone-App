@@ -47,7 +47,7 @@ class HearthstoneHomeFragment : Fragment() {
         recyclerView = binding.homeScreen.recyclerHomeHearthstone
         recyclerView.run {
             setHasFixedSize(true)
-            layoutManager = GridLayoutManager(context, 2)
+            layoutManager = GridLayoutManager(context, TWO_VALUE)
             adapter = HearthstoneHomeAdapter(setListHearthstoneClass()) { hearthstone ->
                 switchFlipperChild(viewFlipperState = SHOW_CHILD_ONE)
                 viewModel.getAllCards(hearthstone.name)
@@ -101,7 +101,7 @@ class HearthstoneHomeFragment : Fragment() {
         recyclerView = binding.hearthstoneScreen.recyclerHearthstone
         recyclerView.run {
             setHasFixedSize(true)
-            layoutManager = GridLayoutManager(context, 1)
+            layoutManager = GridLayoutManager(context, ONE_VALUE)
             adapter = HearthstoneAdapter(cardVO) { hearthstone ->
                 Toast.makeText(context, hearthstone.name, Toast.LENGTH_SHORT).show()
                 findNavController().navigate(setActionNavigate(hearthstone))
@@ -110,19 +110,7 @@ class HearthstoneHomeFragment : Fragment() {
     }
 
     private fun setActionNavigate(hearthstone: CardViewObject) =
-        HearthstoneHomeFragmentDirections.navigateToHearthstoneDetailsFragment(
-            hearthstone.name ?: EMPTY_VALUE,
-            hearthstone.type ?: EMPTY_VALUE,
-            hearthstone.img ?: EMPTY_VALUE,
-            hearthstone.flavor ?: EMPTY_VALUE,
-            hearthstone.text ?: EMPTY_VALUE,
-            hearthstone.cardSet ?: EMPTY_VALUE,
-            hearthstone.faction ?: EMPTY_VALUE,
-            hearthstone.rarity ?: EMPTY_VALUE,
-            hearthstone.attack ?: ZERO_VALUE,
-            hearthstone.cost ?: ZERO_VALUE,
-            hearthstone.health ?: ZERO_VALUE
-        )
+        HearthstoneHomeFragmentDirections.navigateToHearthstoneDetailsFragment(hearthstone)
 
     private fun setErrorState() = switchFlipperChild(viewFlipperState = SHOW_CHILD_TWO)
 
@@ -138,7 +126,7 @@ class HearthstoneHomeFragment : Fragment() {
         private const val SHOW_CHILD_ZERO = 0
         private const val SHOW_CHILD_ONE = 1
         private const val SHOW_CHILD_TWO = 2
-        private const val EMPTY_VALUE = ""
-        private const val ZERO_VALUE = 0
+        private const val ONE_VALUE = 1
+        private const val TWO_VALUE = 2
     }
 }
