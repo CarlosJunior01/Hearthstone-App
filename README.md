@@ -19,7 +19,7 @@ Aplicativo de listagem e Cards Hearthstone.
 
 *******
 
-Aplicativo Android Nativo escrito em Kotlin, consumindo Api Hearthstone e processando resposta com retrofit e tratamento de concorrência com Kotlin Flow, utilizando padrão de arquitetura MVVM + Clean Architecture, com divisão de responsabilidades e separação de conceitos e desacoplamento de camadas. Injeção de dependência com Hilt. Navegação e controle de fluxo de telas com Navigation e animações com Lottie. Testes unitários e Testes de interface utilizando Robolectric e Espresso.
+Aplicativo Android Nativo escrito em Kotlin, consumindo Api Hearthstone e processando resposta com retrofit e tratamento de concorrência com Kotlin Flow, utilizando padrão de arquitetura MVVM + Clean Architecture, com divisão de responsabilidades e separação de conceitos e desacoplamento de camadas. Injeção de dependência com Hilt. Navegação e controle de fluxo de telas com Navigation e animações com Lottie. Testes unitários e Testes de interface utilizando Robolectric e Espresso. E tratamento de erros.
 
 ![Screen_01](https://user-images.githubusercontent.com/9430430/177150508-f706a3ff-7e7a-4b5a-bef0-e372233796fd.png)
 
